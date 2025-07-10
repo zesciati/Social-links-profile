@@ -9,6 +9,9 @@ html {
 
 :root{
   --space-m: clamp(1.2rem, 1.2223rem + 0.1261vw, 1.875rem);
+  --space-sm: clamp(1rem, 1.1123rem + 0.1221vw, 1.275rem);
+  --Green: hsl(75, 94%, 57%);
+  --White: white;
 }
 
 body::before {
@@ -34,6 +37,12 @@ body{
   padding-inline: var(--space-m);
   height: 100vh;
   /* margin: 0 auto; */
+  /* max-width: 100px; */
+  @media screen and (min-width:768px) {
+    max-width: 1200px;
+    margin: 0 auto;
+
+  }
 }
 
 .flex-layout{
@@ -44,16 +53,26 @@ body{
   flex-direction:column;
   /* width: 100vw; */
 }
+.flex-layout img, .flex-layout h2, .flex-layout p{
+  align-self: center;
+} 
 .flex-layout img{
   max-inline-size: 100%;
   height: auto;
   border-radius: 50%;
   width: 25%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* place-self: center; */
-  /* align-self: center; */
+  align-self: center;
 }
-.flex-layout h2,p{
-  margin: 0 auto;
-  /* flex-direction:column; */
+
+.flex-layout h2{
+  color: var(--White);
+}
+
+
+.flex-layout button{
+  padding: .53em;
+  width: 100%;
+
 }
