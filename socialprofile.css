@@ -1,3 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+
 html {
   box-sizing: border-box;
 }
@@ -10,8 +15,11 @@ html {
 :root{
   --space-m: clamp(1.2rem, 1.2223rem + 0.1261vw, 1.875rem);
   --space-sm: clamp(1rem, 1.1123rem + 0.1221vw, 1.275rem);
+  --space-btn: .64em 0;
+  --space-btn-inside: .83rem;
   --Green: hsl(75, 94%, 57%);
   --White: white;
+  --border-radius-btn:5px;
 }
 
 body::before {
@@ -27,7 +35,7 @@ body::before {
 
 body{
   /* height: 100vh; */
-
+  font-family: "Inter", sans-serif;
 }
 
 .flex-container{
@@ -74,5 +82,28 @@ body{
 .flex-layout button{
   padding: .53em;
   width: 100%;
+  background-color: #333333;
+  margin: var(--space-btn);
+  padding: var(--space-btn-inside);
+  color: var(--White);
+  border-radius: var(--border-radius-btn);
+}
 
+.flex-layout p:first-of-type{
+  color: var(--Green);
+  /* font-size: clamp(1.5rem, 0.909rem + 2.95vw, 3.125rem); */
+  /* font-size: clamp(1.5rem, 1.364rem + 0.68vw, 1.875rem); */
+  /* font-size: clamp(1.125rem, 0.966rem + 0.8vw, 1.563rem); */
+  font-size: clamp(1rem, 0.841rem + 0.8vw, 1.438rem);
+}
+.flex-layout p:nth-of-type(2){
+  font-size: clamp(1rem, 0.795rem + 1.02vw, 1.563rem);
+
+  color: var(--White);
+}
+
+@media screen and (max-width:381px) {
+  .flex-layout p:nth-of-type(2){
+    font-size: clamp(0.75rem, 0.432rem + 1.59vw, 1.625rem);
+  }
 }
