@@ -15,6 +15,7 @@ html {
 :root{
   --space-m: clamp(1.2rem, 1.2223rem + 0.1261vw, 1.875rem);
   --space-sm: clamp(1rem, 1.1123rem + 0.1221vw, 1.275rem);
+  --space-location: 1em 0 1.6em;
   --space-btn: .64em 0;
   --space-btn-inside: .83rem;
   --Green: hsl(75, 94%, 57%);
@@ -47,7 +48,7 @@ body{
   /* margin: 0 auto; */
   /* max-width: 100px; */
   @media screen and (min-width:768px) {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
 
   }
@@ -58,6 +59,9 @@ body{
   padding: var(--space-m);
   justify-content: center;
   display: flex;
+  /* max-width: clamp(20rem, 13.636rem + 31.82vw, 37.5rem); */
+  max-width: 500px;
+
   flex-direction:column;
   /* width: 100vw; */
 }
@@ -76,6 +80,7 @@ body{
 
 .flex-layout h2{
   color: var(--White);
+  padding-top: 1em;
 }
 
 
@@ -87,23 +92,26 @@ body{
   padding: var(--space-btn-inside);
   color: var(--White);
   border-radius: var(--border-radius-btn);
+  border: 0;
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
 }
 
+/* 2 tag p using fontsize 16(min)-24px(max) */
 .flex-layout p:first-of-type{
   color: var(--Green);
-  /* font-size: clamp(1.5rem, 0.909rem + 2.95vw, 3.125rem); */
-  /* font-size: clamp(1.5rem, 1.364rem + 0.68vw, 1.875rem); */
-  /* font-size: clamp(1.125rem, 0.966rem + 0.8vw, 1.563rem); */
-  font-size: clamp(1rem, 0.841rem + 0.8vw, 1.438rem);
+  font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+  padding: var(--space-location);
 }
 .flex-layout p:nth-of-type(2){
-  font-size: clamp(1rem, 0.795rem + 1.02vw, 1.563rem);
-
+  /* font-size: clamp(1rem, 0.795rem + 1.02vw, 1.563rem); */
+  font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+  padding-bottom: 1em;
   color: var(--White);
 }
 
 @media screen and (max-width:381px) {
-  .flex-layout p:nth-of-type(2){
+  /* font size 12-16px maybe  */
+  .flex-layout p:first-of-type, .flex-layout p:nth-of-type(2){
     font-size: clamp(0.75rem, 0.432rem + 1.59vw, 1.625rem);
   }
 }
