@@ -62,7 +62,6 @@ body{
   justify-content: center;
   display: flex;
   max-width: 500px;
-
   flex-direction:column;
 }
 .flex-layout img, .flex-layout h2, .flex-layout p{
